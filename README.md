@@ -62,7 +62,8 @@ SET(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -march=native")
 
 If the code runs without any error and the trajetory is corret, you can move on to the next step.
 
-modify
+modify RTG-SLAM-PYBIND/examples/orbslam_rgbd_tum.py
+
 ```
 import argparse
 
