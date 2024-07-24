@@ -91,7 +91,7 @@ if __name__ == "__main__":
 python orbslam_rgbd_tum.py /data/azuryl/RTG-SLAM/thirdParty/ORB-SLAM2-PYBIND/Vocabulary/ORBvoc.txt /data/azuryl/RTG-SLAM/thirdParty/ORB-
 SLAM2-PYBIND/Examples/RGB-D/TUM1.yaml /data/azuryl/dataset/rgbd_dataset_freiburg1_xyz /data/azuryl/RTG-SLAM/thirdParty/ORB-SLAM2-PYBIND/Examples/RGB-D/associations/fr1_xyz.txt
 ```
-in RTG-SLAM/thirdParty/ORB-SLAM2-PYBIND$
+in RTG-SLAM/thirdParty/RTG-SLAM-BACKEND
 ```
 gdb --args ./Examples/RGB-D/rgbd_tum Vocabulary/ORBvoc.txt Examples/RGB-D/TUM1.yaml /data/azuryl/dataset/rgbd_dataset_freiburg1_xyz /data/azuryl/RTG-SLAM/thirdParty/ORB-SLAM2-PYBIND/Examples/RGB-D/associations/fr1_xyz.txt
 ```
