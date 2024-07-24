@@ -64,15 +64,17 @@ If the code runs without any error and the trajetory is corret, you can move on 
 
 modify
 ```
-if __name__ == '__main__':
-  if len(sys.argv) != 5:
-        print('Usage: ./orbslam_rgbd_tum path_to_vocabulary path_to_settings path_to_sequence path_to_association')
-    '''
-    vocab_path = "ORBvoc.txt"
-    setting_path = "tum1.yaml"
-    sequence_path = "/data/TUM_RGBD/rgbd_dataset_freiburg1_desk"
-    assocation_path = "assocations.txt"
-    '''
+import argparse
+
+def main(vocab_path, setting_path, sequence_path, association_path):
+    #
+    print("Vocabulary Path:", vocab_path)
+    print("Setting Path:", setting_path)
+    print("Sequence Path:", sequence_path)
+    print("Association Path:", association_path)
+    #....
+
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process some paths for ORB-SLAM2.')
     parser.add_argument('vocab_path', type=str, help='Path to the vocabulary file')
     parser.add_argument('setting_path', type=str, help='Path to the setting file')
@@ -81,13 +83,13 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     
-    #main(vocab_path, setting_path, sequence_path, assocation_path)
     main(args.vocab_path, args.setting_path, args.sequence_path, args.association_path)
+
 ```
 ```
 python orbslam_rgbd_tum.py /data/azuryl/RTG-SLAM/thirdParty/ORB-SLAM2-PYBIND/Vocabulary/ORBvoc.txt /data/azuryl/RTG-SLAM/thirdParty/ORB-
 SLAM2-PYBIND/Examples/RGB-D/TUM1.yaml /data/azuryl/dataset/rgbd_dataset_freiburg1_xyz /data/azuryl/RTG-SLAM/thirdParty/ORB-SLAM2-PYBIND/Examples/RGB-D/associations/fr1_xyz.txt
-Vocabulary Path: /data/azuryl/RTG-SLAM/thirdParty/ORB-SLAM2-PYBIND/Vocabulary/ORBvoc.txt
+
 ```
 ## 2. Dataset Preparation
 ### 2.1 Replica
